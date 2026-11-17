@@ -1,0 +1,4 @@
+New-Item -ItemType Directory -Force -Path ".\\models" | Out-Null
+$url = "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task"
+Invoke-WebRequest -Uri $url -OutFile ".\\models\\hand_landmarker.task"
+Write-Host "Hand model downloaded."
